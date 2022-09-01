@@ -16,7 +16,7 @@ class MainActivity4 : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tv.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity2::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
         }
