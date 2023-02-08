@@ -3,6 +3,7 @@ package com.tokopedia.cleartoptest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.tokopedia.cleartoptest.databinding.ActivityMain3Binding
 import com.tokopedia.cleartoptest.databinding.ActivityMainBinding
 
@@ -19,5 +20,9 @@ class MainActivity3 : AppCompatActivity() {
             val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
+
+        Log.i(Singleton.TAG, "onCreate: ${Singleton.sharedValue}")
+        Singleton.sharedValue = "changed value"
+        Log.i(Singleton.TAG, "onCreate: ${Singleton.sharedValue}")
     }
 }
